@@ -1,7 +1,5 @@
 SHELL := /usr/bin/env bash
 
-include boilerplate/generated-includes.mk
-
 # Verbosity
 AT_ = @
 AT = $(AT_$(V))
@@ -39,6 +37,8 @@ TESTOPTS ?=
 DOC_BINARY := hack/documentation/document.go
 # ex -hideRules
 DOCFLAGS ?=
+
+include boilerplate/generated-includes.mk
 
 default: all
 
