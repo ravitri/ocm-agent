@@ -16,6 +16,8 @@ IMG ?= $(IMAGE_REGISTRY)/$(IMAGE_REPOSITORY)/${BASE_IMG}
 
 BINARY_FILE ?= build/_output/ocm-agent
 
+CONTAINER_ENGINE ?= $(shell command -v podman 2>/dev/null || command -v docker 2>/dev/null)
+
 GO_SOURCES := $(find $(CURDIR) -type f -name "*.go" -print)
 EXTRA_DEPS := $(find $(CURDIR)/build -type f -print) Makefile
 
