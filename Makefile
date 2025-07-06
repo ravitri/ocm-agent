@@ -13,6 +13,7 @@ IMAGETAG ?= ${GIT_HASH}
 BASE_IMG ?= ocm-agent
 IMAGE_REGISTRY ?= quay.io
 IMAGE_REPOSITORY ?= app-sre
+IMAGE_NAME ?= ocm-agent
 IMG ?= $(IMAGE_REGISTRY)/$(IMAGE_REPOSITORY)/${BASE_IMG}
 
 BINARY_FILE ?= build/_output/ocm-agent
